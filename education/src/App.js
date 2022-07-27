@@ -1,11 +1,18 @@
-import React from "react";
+import {React, useState} from "react";
+import Counter from './components/Counter'
 
 function App() {
+  const [string, setText] = useState("default text");
+
+
+
+
   return (
     <div className="App">
-      <h1>HELLO</h1>
-      <button onClick={setLikes}>Increase</button>
-      <button onclick={setLikes}>Decrease</button>
+      <h1>{string}</h1>
+      <input type="text" value={string} onChange={event => setText(event.target.value)} />
+
+      <Counter/>
     </div>
   );
 }
