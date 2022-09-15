@@ -1,20 +1,15 @@
-import {React, useState} from "react";
-import Counter from './components/Counter'
+import ClassComponent from "./ClassComponent";
+import FunctionalComponent from "./FunctionalComponent";
+import ExpenseItem from "./components/ExpenseItem";
 
-function App() {
-  const [string, setText] = useState("default text");
-
-
-
-
-  return (
-    <div className="App">
-      <h1>{string}</h1>
-      <input type="text" value={string} onChange={event => setText(event.target.value)} />
-
-      <Counter/>
-    </div>
-  );
+function App(){
+    return(
+        <div>
+            <ClassComponent name="Denis"/>
+            <FunctionalComponent name="Denis"/>
+            <ExpenseItem />
+        </div>
+    );
 }
 
 export default App;
