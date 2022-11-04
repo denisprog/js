@@ -16,7 +16,7 @@ function App(){
                 expenses.map(expense =>{
                     return <ExpenseItem {...expense} />;
                 })
-            };
+            }
         </div>
     );
 }
