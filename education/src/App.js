@@ -1,6 +1,6 @@
 import ClassComponent from "./ClassComponent";
 import FunctionalComponent from "./FunctionalComponent";
-import ExpenseItem from "./components/ExpenseItem";
+import Expenses from "./components/Expenses";
 
 function App(){
     const expenses = [
@@ -11,12 +11,9 @@ function App(){
         <div>
             <ClassComponent name="Denis"/>
             <FunctionalComponent name="Denis"/>
+            <Expenses expenses={expenses}/>
 
-            {
-                expenses.map(expense =>{
-                    return <ExpenseItem {...expense} />;
-                })
-            }
+
         </div>
     );
 }
