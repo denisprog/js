@@ -2,6 +2,23 @@ import ClassComponent from "./ClassComponent";
 import FunctionalComponent from "./FunctionalComponent";
 import Expenses from "./components/Expenses/Expenses";
 
+
+const App = () => {
+    const expenses = [
+        {expenseDate:new Date(2022, 2, 22), expenseTitle:"Car Insurancee", expenseAmount:256},
+        {expenseDate:new Date(2022, 3, 23), expenseTitle:"Milk",           expenseAmount:1.5}
+    ];
+    return(
+        <div>
+            <ClassComponent name="Denis"/>
+            <FunctionalComponent name="Denis"/>
+            <Expenses expenses={expenses}/>
+
+
+        </div>
+    );
+}
+/*
 function App(){
     const expenses = [
         {expenseDate:new Date(2022, 2, 22), expenseTitle:"Car Insurancee", expenseAmount:256},
@@ -17,5 +34,5 @@ function App(){
         </div>
     );
 }
-
+*/
 export default App;
