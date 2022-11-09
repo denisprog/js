@@ -1,7 +1,7 @@
 import ClassComponent from "./ClassComponent";
 import FunctionalComponent from "./FunctionalComponent";
 import Expenses from "./components/Expenses/Expenses";
-
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const App = () => {
     const expenses = [
@@ -12,6 +12,7 @@ const App = () => {
         <div>
             <ClassComponent name="Denis"/>
             <FunctionalComponent name="Denis"/>
+            <NewExpense />
             <Expenses expenses={expenses}/>
 
 
