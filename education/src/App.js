@@ -5,14 +5,20 @@ import NewExpense from "./components/NewExpense/NewExpense";
 
 const App = () => {
     const expenses = [
-        {date:new Date(2022, 2, 22), title:"Car Insurancee", amount:256},
-        {date:new Date(2022, 3, 23), title:"Milk",           amount:1.5}
+        {id:"1", date:new Date(2022, 2, 22), title:"Car Insurancee", amount:256},
+        {id:"2", date:new Date(2022, 3, 23), title:"Milk",           amount:1.5}
     ];
+
+    const addExpenseHandler = expense =>{
+        console.log('In App.js');
+        console.log(expense);
+    }
+
     return(
         <div>
             <ClassComponent name="Denis"/>
             <FunctionalComponent name="Denis"/>
-            <NewExpense />
+            <NewExpense onAddExpense={addExpenseHandler}/>
             <Expenses expenses={expenses}/>
 
 
