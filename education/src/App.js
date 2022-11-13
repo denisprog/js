@@ -28,7 +28,7 @@ const App = () => {
         <div>
             <ClassComponent name="Denis"/>
             <FunctionalComponent name="Denis"/>
-            <NewExpense onAddExpense={addExpenseHandler}/>
+            <NewExpense onAddExpense={addExpenseHandler} />
             <Expenses expenses={expenses}/>
 
 
