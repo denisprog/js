@@ -5,8 +5,10 @@ import NewExpense from "./components/NewExpense/NewExpense";
 
 const App = () => {
     const expenses = [
-        {id:"1", date:new Date(2022, 2, 22), title:"Car Insurancee", amount:256},
-        {id:"2", date:new Date(2022, 3, 23), title:"Milk",           amount:1.5}
+        {id:"1", date:new Date(2019, 2, 22), title:"Potato", amount:256},
+        {id:"2", date:new Date(2020, 3, 23), title:"Milk",           amount:150},
+        {id:"3", date:new Date(2021, 3, 23), title:"Butter",           amount:100},
+        {id:"4", date:new Date(2022, 3, 23), title:"Bread",           amount:200},
     ];
 
     const addExpenseHandler = expense =>{
