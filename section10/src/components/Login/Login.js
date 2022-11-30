@@ -30,12 +30,12 @@ const passwordReducer = (state, action) => {
 
 const INIT_EMAIL_STATE = {
   value: '',
-  isValid: false
+  isValid: null
 }
 
 const INIT_PASSWORD_STATE = {
   passwordValue: '',
-  isValid: false
+  isValid: null
 }
 
 const Login = (props) => {
@@ -55,19 +55,22 @@ const Login = (props) => {
     };
   });
 
-  // useEffect(() => {
-  //   const identifier = setTimeout(() => {
-  //     console.log('Checking form validity');
-  //     setFormIsValid(
-  //       enteredEmail.includes('@') && enteredPassword.trim().length > 6
-  //     );
-  //   }, 500 );
+  const {isValid: emailIsValid } = emailState;
+  const {isValid: passwordIsValid } = passwordState;
 
-  //   return () => {
-  //     console.log("CLEANUP");
-  //     clearTimeout(identifier);
-  //   };
-  // }, [enteredEmail, enteredPassword]);
+  useEffect(() => {
+    const identifier = setTimeout(() => {
+      console.log('Checking form validity');
+      setFormIsValid(
+        emailState.isValid && passwordState.isValid
+      );
+    }, 500 );
+
+    return () => {
+      console.log("CLEANUP");
+      clearTimeout(identifier);
+    };
+  }, [emailIsValid, passwordIsValid]);
 
   const emailChangeHandler = (event) => {
     dispatchEmail({type:'USER_INPUT', value: event.target.value });
