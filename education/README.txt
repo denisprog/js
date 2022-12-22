@@ -2,5 +2,5 @@ https://github.com/PacktPublishing/React---The-Complete-Guide-includes-Hooks-Rea
 
 
 
-useState, useEffect, useLayoutEffect, 
+useState, useEffect, useLayoutEffect, useRef
 useCallback, useMemo: связаны с useEffect

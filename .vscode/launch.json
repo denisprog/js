@@ -4,12 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
-            "type": "firefox",
+            "type": "pwa-chrome",
             "request": "launch",
-            "name": "Project2: Debug in firefox",
+            "name": "section11: Debug in chrome",
             "url": "http://localhost:3000",
-            "webRoot": "${workspaceFolder}/01-starting-project 2"
+            "webRoot": "${workspaceFolder}/section11"
         },
     {
         "type": "firefox",
